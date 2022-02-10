@@ -7,9 +7,8 @@ class FormularioDao{
     
     function formularioEnviadoABitrix($listadoFormularios){
        
-       /*  $formularioEnviado = CRest::call('crm.item.add',$this->formNormalizadoABitrix($listadoFormularios));  
-        return $formularioEnviado;  */
-        return true;
+        $formularioEnviado = CRest::call('crm.item.add',$this->formNormalizadoABitrix($listadoFormularios));  
+        return $formularioEnviado; 
     }
     
     function formNormalizadoABitrix($listadoFormularios){

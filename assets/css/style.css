@@ -1,0 +1,166 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+header{
+    background-image: url(../imagenes/pro-table-top.png);
+    background-position: left top ;
+    background-repeat: no-repeat;
+    z-index: 2;
+    height: 250px;
+}
+ .logo{
+    top:10px;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    left: 45%;
+    margin-top: 30px;
+}
+
+.cd-intro{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    margin: 5px;
+}
+.buscador{
+   
+    height: 100px;
+    text-align: center;
+    margin:15px;
+   
+}
+
+.form-inline{
+    width: 45%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.form-control{
+    width: 250px !important;
+}
+.form-control-plaintext{
+    width: 170px !important;
+
+}
+button a{
+    color: #fff;
+    text-decoration: none;
+}
+h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 800;
+}
+.btnEnviar{
+    background-color:#3BB3F6 ;
+    width: 180px;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 20px;
+    border-color: rgb(88, 156, 219);
+    color: #fff;
+    font-size: 20px;
+}
+@media screen and (min-width: 1500px) {
+   
+    .buscador{
+        width: 50%;
+        margin: auto;
+    }
+    footer{
+        height: 250px ;
+    }
+}
+
+.containerGeneral{
+    margin: 30px;
+
+}
+.containerAllForm{
+    margin:10px auto;
+    width: 95%;
+    text-align: center !important; 
+    padding: 15px;
+
+}
+.container-fluid{
+    width: 90%;
+    margin-top: 10px;
+}
+
+.title{
+    margin-top: 10px auto;
+    font-size: 20px;
+    color:#00b6f9;
+    font-weight: bold !important;
+}
+/* button style */
+
+#num_solicitud{
+    margin-left: 20px;
+}
+
+#nombre_proveedor{
+    margin-left: 10px;
+} 
+
+#cond_Pago{
+    margin-left: 13px;
+    
+}  
+.tiempoEntrega,.condPago{
+    margin-top: 15px;
+}   
+#tiempoEntrega{
+    margin-left: 29px;
+
+}
+.productos{
+    margin-top: 30px;
+    font-weight: bolder;
+    font-size: 20px;
+    
+}
+input  .inputbtn{
+    border:1px solid #00b6f9;
+    border-radius: 5px;
+    
+}
+.inputList{
+    border:0.2px solid #e9ecef;
+    font-weight: lighter;
+}
+.col-sm-4,.col-sm-2,.col-sm-1{
+    font-weight: bold;
+    order:0.2px solid #e9ecef;
+    font-size: 14px;
+}
+.col-sm-2,.col-sm-1{
+    text-align: center;
+}
+.inputsList{
+   margin-top: 10px;
+}
+
+#beneficiosAdd,#vigenciaCotizacion{
+    margin-left: 5px;
+}
+.observacionesGenerales * {
+    vertical-align: text-top;
+}
+.observacionesGenerales{
+    margin: 25px;
+}
+.btnAgregarProducto{
+    margin-top: 20px;
+}

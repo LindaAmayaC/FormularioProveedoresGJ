@@ -14,7 +14,7 @@
     $valoresProducto = $_POST['valor_producto']; 
     $condicionPago = $_POST['cond_Pago'];
     $tiempoEntrega =  $_POST['tiempoEntrega'];
-    $ivaProducto = $_POST['ivaProducto']; 
+    $ivaProducto = $_POST['iva_producto']; 
     $totalesProducto = $_POST['total_producto'];
     $condicionGarantia =$_POST['condGarantia'];
     $beneficioAdicional =$_POST['beneficioAdd'];
@@ -22,6 +22,12 @@
     $tiempoGarantia = $_POST['tiempoGarantia'];
     $observacionesGenerales =$_POST['observacionesGenerales'];
     $nitProveedor=$_POST['nit'];
+    
+    print_r($valoresProducto);
+    print_r($condicionPago);
+    print_r($ivaProducto);
+    print_r(count($valoresProducto));
+    
 
     $datosFormulario=array(
         $numeroSolicitud,$nombreProveedor,$nombresProducto,
@@ -31,9 +37,9 @@
     );
 
 
-    $formcontroller = new FormularioController;
+    /* $formcontroller = new FormularioController;
     $formEnviado = $formcontroller -> enviarFormulario($datosFormulario);
 
     
-    header("Location:    ../../index.php?respuesta=$formEnviado");  
+    header("Location:    ../../index.php?respuesta=$formEnviado");   */
 ?>  

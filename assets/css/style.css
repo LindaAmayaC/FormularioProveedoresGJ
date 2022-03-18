@@ -93,7 +93,7 @@ h1 {
 }
 
 #nombre_proveedor{
-    margin-left: 20px;
+    margin-left: 22px;
 } 
 
 #cond_Pago{
@@ -122,12 +122,12 @@ input  .inputbtn{
     border:0.2px solid #e9ecef;
     font-weight: lighter;
 }
-.col-sm-2,.col-sm-5,.col-sm-3{
+.col-sm-2,.col-sm-4{
     font-weight: bold;
     order:0.2px solid #e9ecef;
     font-size: 18px;
 }
-.col-sm-2,.col-sm-3{
+.col-sm-2{
     text-align: center !important;
 }
 .inputsList{
@@ -148,7 +148,7 @@ input  .inputbtn{
     margin-left: 5px;
 }
 #ivaProducto{
-    margin-left: 150px;
+    margin-left: 157px;
 }
 .textProveedor{
     font-weight: 600 !important; 
@@ -159,4 +159,15 @@ input  .inputbtn{
     width: 40%;
     margin: 20px auto;
     
+}
+select{
+    width :210px;
+    height: 28px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-left: 15px;
+
+}
+#select{
+    margin-left: 28px;
 }

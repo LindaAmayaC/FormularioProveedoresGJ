@@ -4,10 +4,15 @@ include_once 'php/dao/conexion/crest.php';
 class SolicitudDao{
     
 
-   function obtenerSolicitudBitrix($numeroSolicitud){
-       $datosSolicitudBitrix = CRest::call('crm.deal.productrows.get',['id' => $numeroSolicitud]);
-       return $datosSolicitudBitrix;  
-   }
+  function obtenerSolicitudBitrix($numeroSolicitud){
+
+        if(CRest::call('crm.deal.get',['id' => $numeroSolicitud])==true){
+          $datosSolicitudBitrix = CRest::call('crm.deal.productrows.get',['id' => $numeroSolicitud]);
+        }else{
+            return false;
+        }
+      return $datosSolicitudBitrix;  
+  }
     
 }
 ?>

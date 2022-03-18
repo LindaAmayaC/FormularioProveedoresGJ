@@ -15,13 +15,13 @@ class Formulario
     public $condicionGarantia;
     public $beneficioAdicional;
     public $vigenciaCotizacion;
-    public $observacionProducto;
     public $observacionesGenerales;
+    public $nitProveedor;
 
     function __construct($numeroSolicitud, $nombreProveedor, $nombreProducto, $cantidadProducto, 
                         $valorProducto, $condicionPago,$tiempoEntrega,$ivaProducto, $totalProducto,
                         $tiempoGarantia,$condicionGarantia,$beneficioAdicional,$vigenciaCotizacion,
-                        $observacionProducto,$observacionesGenerales)
+                        $observacionesGenerales, $nitProveedor)
     {
         $this->numeroSolicitud     =$numeroSolicitud;
         $this->nombreProveedor     =$nombreProveedor;
@@ -36,7 +36,7 @@ class Formulario
         $this->condicionGarantia   =$condicionGarantia;
         $this->beneficioAdicional  =$beneficioAdicional;
         $this->vigenciaCotizacion  =$vigenciaCotizacion;
-        $this->observacionProducto =$observacionProducto;
         $this->observacionesGenerales =$observacionesGenerales;
+        $this->nitProveedor        =$nitProveedor;
     }
 }

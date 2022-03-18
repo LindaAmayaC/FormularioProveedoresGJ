@@ -14,26 +14,26 @@
     $valoresProducto = $_POST['valor_producto']; 
     $condicionPago = $_POST['cond_Pago'];
     $tiempoEntrega =  $_POST['tiempoEntrega'];
-    $ivasProducto = $_POST['iva_producto']; 
+    $ivaProducto = $_POST['ivaProducto']; 
     $totalesProducto = $_POST['total_producto'];
-    $condicionesGarantia =$_POST['condGarantia'];
+    $condicionGarantia =$_POST['condGarantia'];
     $beneficioAdicional =$_POST['beneficioAdd'];
     $vigenciaCotizacion=$_POST['vigenciaCotizacion'];
-    $tiemposGarantia = $_POST['tiempoGarantia'];
-    $observacionesProducto =$_POST['observacion'];
+    $tiempoGarantia = $_POST['tiempoGarantia'];
     $observacionesGenerales =$_POST['observacionesGenerales'];
-  
+    $nitProveedor=$_POST['nit'];
+
     $datosFormulario=array(
         $numeroSolicitud,$nombreProveedor,$nombresProducto,
         $cantidadesProducto,$valoresProducto,$condicionPago,
-        $tiempoEntrega,$ivasProducto,$totalesProducto, $tiemposGarantia,$condicionesGarantia,
-        $beneficioAdicional,$vigenciaCotizacion,$observacionesProducto,$observacionesGenerales
+        $tiempoEntrega,$ivaProducto,$totalesProducto, $tiempoGarantia,$condicionGarantia,
+        $beneficioAdicional,$vigenciaCotizacion,$observacionesGenerales,$nitProveedor
     );
-  
-   
+
+
     $formcontroller = new FormularioController;
     $formEnviado = $formcontroller -> enviarFormulario($datosFormulario);
-  
+
     
     header("Location:    ../../index.php?respuesta=$formEnviado");  
 ?>  

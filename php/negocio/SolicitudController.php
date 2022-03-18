@@ -7,14 +7,14 @@
             $solicitudNormalizadaObtenida = $this ->datosSolicitudNormalizados($productosSolicitudBitrix['result']);
             
             if($solicitudNormalizadaObtenida->numeroSolicitud == $numeroSolicitud){
-              return $solicitudNormalizadaObtenida; 
+                return $solicitudNormalizadaObtenida; 
             }
             elseif($solicitudNormalizadaObtenida->numeroSolicitud == null){
                 header("Location: index.php?respuestaSolicitud=null");
-               
+            
             }
         }  
-      
+    
         private function datosSolicitudNormalizados($productosSolicitud){
             $listaProductos=array();
 

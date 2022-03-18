@@ -58,7 +58,7 @@ $contador = count($solicitudObtenida->productos);
                         </div>
                         <div class="iva">
                             <label for="pwd">Nit</label>
-                            <input name="nit" class="inputbtn" id="ivaProducto" type="text" Required  placeholder="Sin código verificación"  ></input>
+                            <input name="nit" class="inputbtn" id="ivaProducto" type="text" Required  placeholder="Sin espacios"  ></input>
                         </div>
                         <div class="condPago">
                             <label for="pwd">Condiciones de pago</label>
@@ -68,6 +68,7 @@ $contador = count($solicitudObtenida->productos);
                             <label for="pwd">Tiempo  de  entrega</label>
                             <input name="tiempoEntrega" class="inputbtn" id="tiempoEntrega" type="number" placeholder="Días" Required ></input>
                         </div>
+                       
                         <div class="tiempoEntrega">
                             <label for="pwd">Vigencia de cotización</label>
                             <input name="vigenciaCotizacion" class="inputbtn" id="vigenciaCotizacion" type="number" placeholder="Días" Required ></input>

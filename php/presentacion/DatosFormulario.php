@@ -23,11 +23,18 @@
     $observacionesGenerales =$_POST['observacionesGenerales'];
     $nitProveedor=$_POST['nit'];
     
-    print_r($valoresProducto);
-    print_r($condicionPago);
-    print_r($ivaProducto);
-    print_r(count($valoresProducto));
     
+    
+    for ($i=0; $i < count($ivaProducto); $i++) { 
+        if ( $ivaProducto[$i]==0){
+            $nombresProducto[$i]="*".$nombresProducto[$i];
+        }
+        else{
+            $nombresProducto[$i]=$nombresProducto[$i];
+        }
+       
+    } 
+     print_r($nombresProducto);
 
     $datosFormulario=array(
         $numeroSolicitud,$nombreProveedor,$nombresProducto,

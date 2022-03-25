@@ -95,12 +95,14 @@ $contador = count($solicitudObtenida->productos);
                                 <div class="col-sm-2" style="background-color:#bce7fd;">IVA</div>
                                 <div class="col-sm-2" style="background-color:#bce7fd;">Valor total</div>
                                 <?php for ($i=0; $i < $contador; $i++) {?>
-                                    <input name="nombre_producto[]" id="nombre_producto"  class="col-sm-4 inputList nombre_producto"        style="background-color:#f8f9fa;" value="<?php echo $solicitudObtenida->productos[$i]->nombreProducto ?>" readonly></input>
-                                    <input name="cant_producto[]"   id="cant_producto"    class="col-sm-2 inputList cant_producto numeric"  style="background-color:#f8f9fa;" value="<?php echo $solicitudObtenida->productos[$i]->cantidadProducto ?>" readonly></input>
-                                    <input name="valor_producto[]"  id="valor_producto"   class="col-sm-2 inputList valor_producto numeric textProveedor"  type="number" Required ></input>
-                                    <input name="iva_producto[]"  id="iva_producto"   class="col-sm-2 inputList iva_producto numeric textProveedor"  type="number" Required ></input>
-                                    <input name="total_producto[]"  id="total_producto"   class="col-sm-2 inputList total_producto numeric textProveedor"  type="number"  value="<?php echo $solicitudObtenida->productos[$i]->cantidadProducto ?>" readonly></input>
-                                <?php }?>
+                                    <input name="nombre_producto[]" id=<?php echo "nombre_producto_". $i;?>  class="col-sm-4 inputList nombre_producto"        style="background-color:#f8f9fa;" value="<?php echo $solicitudObtenida->productos[$i]->nombreProducto ?>" readonly></input>
+                                    <input name="cant_producto[]"  id=<?php echo "cant_producto_" . $i;?>  class="col-sm-2 inputList cant_producto numeric" onkeyup="calcularTotal(<?php echo $i;  ?>)" style="background-color:#f8f9fa;" value="<?php echo $solicitudObtenida->productos[$i]->cantidadProducto ?>" readonly></input>
+                                    <input name="valor_producto[]"  id=<?php echo "valor_producto_". $i;?>   class="col-sm-2 inputList valor_producto numeric textProveedor" onkeyup="calcularTotal(<?php echo $i;  ?>)"  type="number" Required ></input>
+                                    <input name="iva_producto[]"  id=<?php echo "iva_producto_". $i;?>  class="col-sm-2 inputList iva_producto numeric textProveedor" onkeyup="calcularTotal(<?php echo $i;  ?>)"  type="number" Required ></input>
+                                    <input name="total_producto[]"  id=<?php echo "total_producto_". $i;?>   class="col-sm-2 inputList total_producto numeric textProveedor"  type="number"  readonly></input>
+                                    <input type="hidden" name="contador" id="contador" value="<?php echo $i;  ?>"></input>
+                                <?php }?> 
+                                
                             </div>
                             <div class="btnAgregarProducto"> 
                             <button type="button" class="btn btn-outline-primary" id="btnAgregarProducto" onclick="accionBtnAggProducto()">Agregar Producto</button>

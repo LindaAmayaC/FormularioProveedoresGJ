@@ -44,9 +44,9 @@
     );
 
 
-    /* $formcontroller = new FormularioController;
+     $formcontroller = new FormularioController;
     $formEnviado = $formcontroller -> enviarFormulario($datosFormulario);
 
     
-    header("Location:    ../../index.php?respuesta=$formEnviado");   */
+    header("Location:    ../../index.php?respuesta=$formEnviado");   
 ?>  
